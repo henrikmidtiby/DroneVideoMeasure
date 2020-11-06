@@ -161,6 +161,7 @@ class DroneLog:
 
     def get_log_data_from_frame(self, frame):
         logger.debug(f'Getting log data for frame {frame}')
+        assert(isinstance(frame, int), type(frame))
         delta_time = timedelta(seconds=frame / self.video_nb_frames * self.video_duration)
         time = self.video_start_time + delta_time
         idx = self.get_time_idx(time)
