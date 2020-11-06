@@ -122,7 +122,8 @@ class video_annotator {
       self.overlay.fabricCanvas().renderAll();
     });
     this.overlay.fabricCanvas().on('mouse:up', function(event) {
-      if (!self.do_draw || self.selection || event.e.target.tagName != "CANVAS") return;
+      if (!self.do_draw || self.selection || event.e.target.tagName != "CANVAS") 
+        return;
       self.mouse_is_down = false;
       self.viewer.setMouseNavEnabled(!self.mouse_is_down);
       self.overlay.fabricCanvas().remove(self.line);
