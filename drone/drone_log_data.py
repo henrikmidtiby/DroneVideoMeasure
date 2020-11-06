@@ -84,6 +84,7 @@ class DroneLog:
                     except ValueError:
                         logger.debug(f'Row skipped because of value error.')
                         continue
+        logger.debug(f'Read {len(self.height)} lines of pose data from the log file')
 
     def get_video_data(self, project, video_file):
         logger.debug(f'Reading video data for video {video_file} in {project}')
