@@ -69,5 +69,7 @@ def get_horizon_dict():
 
 horizon_dict = get_horizon_dict()
 
-celery = Celery(__name__, broker=AppConfig.CELERY_BROKER_URL, backend=AppConfig.CELERY_RESULT_BACKEND)
+celery = Celery(__name__, 
+        broker=AppConfig.CELERY_BROKER_URL, 
+        backend=AppConfig.CELERY_RESULT_BACKEND)
 tasks = {}
